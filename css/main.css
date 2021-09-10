@@ -1,0 +1,30 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .searched-results {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+  }
+  .searched-film{
+      height: 350px;
+      width: 260px;
+      background-color: grey;
+      margin: 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+  .image{
+      height: 260px;
+      width: 185px;
+  }
+  .title{
+      color: aqua;
+      font-weight: 800;
+      text-shadow: black;
+  }
