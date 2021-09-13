@@ -96,3 +96,20 @@ function listen() {
       favDiv.addEventListener("click", handleFavs);
     }
   }
+  function setInLocalStorage() {
+    localStorage.setItem('favorites', JSON.stringify(favMovies));
+
+  }
+  function getLocalStorage() {
+    // obtenermos lo que hay en el LS
+    const localStorageFavorites = localStorage.getItem('favorites');
+    // siempre que cojo datos del local storage tengo que comprobar si son válidos
+    // es decir si es la primera vez que entro en la página
+    if (localStorageFavorites !== null) {
+      const arrayFavorites = JSON.parse(localStorageFavorites);
+      favMovies = arrayFavorites;
+    }
+
+    showFavs();
+  }
+  getLocalStorage();
