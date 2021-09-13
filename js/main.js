@@ -67,7 +67,7 @@ function showFavs(){
   let html='';
   for (const fav of favMovies){
     html+=`<div class="favorite-div" id="${fav.show.id}">`
-    html+=`<p class="fav-title">${fav.show.name}"</p>`
+    html+=`<p class="fav-title">${fav.show.name}</p>`
     if (fav.show.image === null) {
       html += `<div class="fav-image" style="background-image: url(https://via.placeholder.com/210x295/ffffff/666666/?text=TV);"></div>`;
     } else {
@@ -109,7 +109,6 @@ function listen() {
       const arrayFavorites = JSON.parse(localStorageFavorites);
       favMovies = arrayFavorites;
     }
-
     showFavs();
   }
   getLocalStorage();
